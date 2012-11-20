@@ -39,7 +39,7 @@ TARGETS=cpptod.html ctod.html pretod.html cppdbc.html index.html		\
 	mixin.html dbc.html version.html errors.html garbage.html			\
 	memory.html float.html iasm.html interface.html portability.html	\
 	entity.html abi.html windows.html dll.html htomodule.html			\
-	faq.html dstyle.html wc.html changelog.html glossary.html			\
+	faq.html dstyle.html wc.html contribute.html changelog.html glossary.html \
 	acknowledgements.html builtin.html interfaceToC.html				\
 	comparison.html rationale.html ddoc.html code_coverage.html			\
 	exception-safe.html rdmd.html templates-revisited.html				\

@@ -1,0 +1,79 @@
+Ddoc
+
+$(D_S Contribute,
+	$(SECTION3 Quick links,
+		$(UL
+			$(LI Compile the compiler, runtime and standard library)
+		)
+	)
+
+	$(P
+		This page contains instructions for contributing to the D programming language,
+		including all tools shipped with the reference implementation.
+	)
+
+	$(P
+		The source code of D and its tools are hosted as the
+		$(LINK2 https://github.com/D-Programming-Language, D-Programming-Language)
+		organization at github. The organization currently contains six repositories:
+
+		$(UL
+			$(LI
+				The reference compiler - 
+				$(LINK2 https://github.com/D-Programming-Language/dmd, dmd)
+			)
+
+			$(LI
+				The runtime library - 
+				$(LINK2 https://github.com/D-Programming-Language/druntime, druntime)
+			)
+
+			$(LI
+				The standard library - 
+				$(LINK2 https://github.com/D-Programming-Language/phobos, phobos)
+			)
+
+			$(LI
+				The dlang.org website (formerly known as d-programming-language.org) - 
+				$(LINK2 https://github.com/D-Programming-Language/d-programming-language.org, d-programming-language.org)
+			)
+
+			$(LI
+				Installers for the reference compiler - 
+				$(LINK2 https://github.com/D-Programming-Language/installer, installer)
+			)
+
+			$(LI
+				Various other related tools (here is the location of rdmd) - 
+				$(LINK2 https://github.com/D-Programming-Language/tools, tools)
+			)
+		)
+	)
+
+	$(SECTION2 Overview,
+		$(OL
+			$(LI Install the $(LINK2 #prerequisites, prerequisites))
+			$(LI Fork the DMD, druntime and Phobos repositories)
+			$(LI Clone the newly forked repositories)
+			$(LI Compile DMD, druntime and Phobos using Make)
+			$(LI Setup a dmd.conf/ini file)
+			$(LI Run the tests for the project to be worked on)
+			$(LI Create and checkout a new git branch for the changes to be made)
+			$(LI Make the changes)
+			$(LI Commit the changes)
+			$(LI Rerun the tests to make sure the changes didn't break anything)
+			$(LI Rebase the latest changes from the master branch)
+			$(LI Push the newly created branch to your fork at github)
+			$(LI Create a pull request on the newly pushed branch from your fork at github)
+			$(LI Wait for the changes you get merged upstream)
+		)
+	)
+
+	$(SECTION2 $(ANCHOR prerequisites, Prerequisites),
+		$(UL
+			$(LI $(LINK2 http://git-scm.com/, git))
+			$(LI $(LINK2 https://github.com/, Account on github))
+			$(LI $(LINK2 http://www.gnu.org/software/make/, Make))
+		)
+	)
+)

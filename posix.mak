@@ -45,7 +45,7 @@ howtos.html language-reference.html robots.txt process.php
 
 TARGETS=32-64-portability.html abi.html acknowledgements.html			\
 	arrays.html ascii-table.html attribute.html bugstats.php			\
-	builtin.html changelog.html class.html code_coverage.html			\
+	builtin.html contribute.html changelog.html class.html code_coverage.html \
 	concepts.html const3.html const-faq.html COM.html comparison.html	\
 	cpp_interface.html cpptod.html ctod.html D1toD2.html				\
 	d-array-article.html d-floating-point.html dbc.html ddoc.html		\

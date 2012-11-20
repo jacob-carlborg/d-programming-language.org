@@ -197,6 +197,7 @@ $(NAVBLOCK_HEADER $(TOCHEADER Documentation),
 )
 $(NAVBLOCK_HEADER $(TOCHEADER Community),
 	$(TOCENTRYT http://forum.dlang.org/, User forums, Forums)
+	$(TOCENTRYT contribute.html, Contribute, Contribute)
 	$(TOCENTRYT http://github.com/D-Programming-Language, D on github, GitHub)
 	$(TOCENTRYT http://prowiki.org/wiki4d/wiki.cgi?FrontPage, Wiki for the D Programming Language, Wiki)
 	$(TOCENTRYT http://prowiki.org/wiki4d/wiki.cgi?ReviewQueue, Queue of current and upcoming standard library additions, Review Queue)
@@ -369,6 +370,7 @@ BLOCKQUOTE_PLAIN = <blockquote><p>$0</p></blockquote>
 TT=<tt>$0</tt>
 SUB=<sub>$0</sub>
 LNAME2=<a name="$1">$+</a>
+ANCHOR=<span id="$1">$+</span>
 SECTION1=<h1>$1</h1>$+
 SECTION2=<h2>$1</h2>$+
 SECTION3=<h3>$1</h3>$+
