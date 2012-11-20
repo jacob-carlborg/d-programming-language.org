@@ -13,6 +13,16 @@ $(D_S Contribute,
 	)
 
 	$(P
+		Note, in this text "Posix" is considered to be FreeBSD, Linux, Mac OS X and
+		basically any operating system that is not Windows.
+	)
+
+	$(P
+		Regardless of what you want to contribute to you need to install the
+		reference compiler, runtime and standard library.
+	)
+
+	$(P
 		The source code of D and its tools are hosted as the
 		$(LINK2 https://github.com/D-Programming-Language, D-Programming-Language)
 		organization at github. The organization currently contains six repositories:
@@ -74,6 +84,66 @@ $(D_S Contribute,
 			$(LI $(LINK2 http://git-scm.com/, git))
 			$(LI $(LINK2 https://github.com/, Account on github))
 			$(LI $(LINK2 http://www.gnu.org/software/make/, Make))
+			$(LI The C++ system compiler (see platform specific prerequisites below))
+		)
+
+		$(SECTION3 $(ANCHOR prerequisites_posix, Posix:),
+			$(UL
+				$(LI $(LINK2 http://gcc.gnu.org, GCC))
+			)
+		)
+
+		$(SECTION3 $(ANCHOR prerequisites_osx, Mac OS X:),
+			$(P
+				On Mac OS X GCC is currently only supported. Either install the complete
+				developer environment, that is Xcode and all the SDKs. Or install just the
+				Command Line Tools. Either way, the command line tools need to be
+				installed. If installing Xcode, the command line tools should be installed
+				from inside Xcode.
+			)
+
+			$(P
+				To download Xcode or the Command Line Tools a free Apple ID is required.
+			)
+
+			$(UL
+				$(LI $(LINK2 https://developer.apple.com/xcode, Xcode))
+				$(LI $(LINK2 https://developer.apple.com/downloads/index.action, Command Line Tools))
+			)
+		)
+
+		$(SECTION3 $(ANCHOR prerequisites_windows, Windows:),
+			$(UL
+				$(LI $(LINK2 http://www.digitalmars.com/download/freecompiler.html, Digital Mars C/C++ Compiler))
+			)
+		)
+	)
+
+	$(SECTION2 $(ANCHOR detailed_instructions, Detailed Instructions),
+		$(OL
+			$(LI Install the $(LINK2 #prerequisites, prerequisites))
+		)
+
+		$(SECTION3 $(ANCHOR detailed_instructions_fork_repositories, Fork the Repositories),
+			$(OL
+				$(LI Make sure you are logged in with your $(LINK2 https://github.com, github) account)
+
+				$(LI
+					Open the $(LINK2 https://github.com/D-Programming-Language/dmd, DMD repository)
+					at github
+				)
+
+				$(LI
+					Press the $(LINK2 https://github.com/D-Programming-Language/dmd/fork_select, Fork)
+				 	button in the upper right corner. After a few seconds you should have
+					been redirected to your newly created fork
+				)
+
+				$(LI
+					Do the same to fork $(LINK2 https://github.com/D-Programming-Language/druntime, druntime)
+					and $(LINK2 https://github.com/D-Programming-Language/phobos, Phobos)
+				)
+			)
 		)
 	)
 )
