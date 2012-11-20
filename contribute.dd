@@ -13,13 +13,33 @@ $(D_S Contribute,
 	)
 
 	$(P
-		Note, in this text "Posix" is considered to be FreeBSD, Linux, Mac OS X and
-		basically any operating system that is not Windows.
-	)
-
-	$(P
 		Regardless of what you want to contribute to you need to install the
 		reference compiler, runtime and standard library.
+	)
+
+	$(SECTION3 Conventions,
+	  In this page the following conventions are used:
+	  $(UL
+	    $(LI 
+	      "Posix" is considered to be FreeBSD, Linux, Mac OS X and basically any
+	      operating system other than Windows
+	    )
+
+      $(LI
+        $(I $(VAR var)) is used to indicate a piece of text shat should be replaced. Do not use it
+        as it literarily stands
+      )
+
+      $(LI
+        A dollar sign, $, indicates that a command should be run in a terminal. The dollar
+        sign is itself not part of the command and should not be typed
+      )
+
+			$(LI
+				All local paths are written for Posix. To make the paths work on Windows
+				you generally just need to replace all slashes (/) with a backslash (\)
+			)
+	  )
 	)
 
 	$(P
@@ -82,7 +102,7 @@ $(D_S Contribute,
 	$(SECTION2 $(ANCHOR prerequisites, Prerequisites),
 		$(UL
 			$(LI $(LINK2 http://git-scm.com/, git))
-			$(LI $(LINK2 https://github.com/, Account on github))
+			$(LI Account on $(LINK2 https://github.com/, github))
 			$(LI $(LINK2 http://www.gnu.org/software/make/, Make))
 			$(LI The C++ system compiler (see platform specific prerequisites below))
 		)
@@ -90,25 +110,6 @@ $(D_S Contribute,
 		$(SECTION3 $(ANCHOR prerequisites_posix, Posix:),
 			$(UL
 				$(LI $(LINK2 http://gcc.gnu.org, GCC))
-			)
-		)
-
-		$(SECTION3 $(ANCHOR prerequisites_osx, Mac OS X:),
-			$(P
-				On Mac OS X GCC is currently only supported. Either install the complete
-				developer environment, that is Xcode and all the SDKs. Or install just the
-				Command Line Tools. Either way, the command line tools need to be
-				installed. If installing Xcode, the command line tools should be installed
-				from inside Xcode.
-			)
-
-			$(P
-				To download Xcode or the Command Line Tools a free Apple ID is required.
-			)
-
-			$(UL
-				$(LI $(LINK2 https://developer.apple.com/xcode, Xcode))
-				$(LI $(LINK2 https://developer.apple.com/downloads/index.action, Command Line Tools))
 			)
 		)
 
@@ -120,8 +121,51 @@ $(D_S Contribute,
 	)
 
 	$(SECTION2 $(ANCHOR detailed_instructions, Detailed Instructions),
-		$(OL
-			$(LI Install the $(LINK2 #prerequisites, prerequisites))
+		$(SECTION3 $(ANCHOR detailed_instructions_prerequisites, Prerequisites),
+			$(OL
+				$(LI Install the $(LINK2 #prerequisites, prerequisites))
+			)
+
+			$(SECTION4 $(ANCHOR detailed_instructions_prerequisites_osx, Mac OS X:),
+				$(P
+					On Mac OS X GCC is currently only supported. Either install the complete
+					developer environment, that is Xcode and all the SDKs. Or install just the
+					Command Line Tools. Either way, the command line tools need to be
+					installed. If installing Xcode, the command line tools should be installed
+					from inside Xcode. Do this by:
+
+          $(OL
+            $(LI Select the menu Xcode -> Preferences)
+            $(LI Select Downloads -> Components)
+            $(LI Click Install next to Command Line Tools)
+          )
+				)
+
+				$(P
+					To download Xcode or the Command Line Tools a free Apple ID is required.
+				)
+
+				$(UL
+					$(LI $(LINK2 https://developer.apple.com/xcode, Xcode))
+					$(LI $(LINK2 https://developer.apple.com/downloads/index.action, Command Line Tools))
+				)
+			)
+			
+			$(SECTION4 $(ANCHOR detailed_instructions_prerequisites_windows, Windows:),
+				$(OL
+					$(LI Download the $(LINK2 http://www.digitalmars.com/download/freecompiler.html, C++ compiler))
+					$(LI Extract the newly downloaded archive)
+
+					$(LI 
+					  Place the newly extracted folder in an appropriate directory $(VAR path), without any 
+					  spaces in the path, this is really important
+					)
+
+					$(LI
+						Add the $(VAR path)\dm\bin directory to the PATH environment variable
+					)
+				)
+			)
 		)
 
 		$(SECTION3 $(ANCHOR detailed_instructions_fork_repositories, Fork the Repositories),
@@ -142,6 +186,36 @@ $(D_S Contribute,
 				$(LI
 					Do the same to fork $(LINK2 https://github.com/D-Programming-Language/druntime, druntime)
 					and $(LINK2 https://github.com/D-Programming-Language/phobos, Phobos)
+				)
+			)
+		)
+
+		$(SECTION3 $(ANCHOR detailed_instructions_clone_repositories, Clone the Repositories),
+			$(OL
+				$(LI
+					Create a new directory called $(VAR path)/dlang (on Windows without
+					any spaces)
+				)
+
+				$(LI 
+					In $(VAR path)/dlang clone your own fork of DMD by running:
+					$(D_CODE $ git clone https://github.com/$(VAR github_account_name)/dmd)
+				)
+	
+				$(LI
+					Now clone the Phobos and druntime repositories as well:
+					$(D_CODE $ git clone https://github.com/$(VAR github_account_name)/phobos)
+					$(D_CODE $ git clone https://github.com/$(VAR github_account_name)/druntime)
+				)
+			)
+		)
+
+		$(SECTION3 $(ANCHOR detailed_instructions_compile, Compile the Projects),
+			$(OL
+				$(LI Navigate to $(VAR path)/dlang/dmd/src)
+				$(LI Compile DMD by running:
+					$(SECTION4 Posix, $(D_CODE $ make -f posix.mak))
+					$(SECTION4 Windows, $(D_CODE $ make -f win32.mak))
 				)
 			)
 		)
