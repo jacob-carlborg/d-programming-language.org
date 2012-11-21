@@ -213,9 +213,18 @@ $(D_S Contribute,
 		$(SECTION3 $(ANCHOR detailed_instructions_compile, Compile the Projects),
 			$(OL
 				$(LI Navigate to $(VAR path)/dlang/dmd/src)
+
 				$(LI Compile DMD by running:
 					$(SECTION4 Posix, $(D_CODE $ make -f posix.mak))
 					$(SECTION4 Windows, $(D_CODE $ make -f win32.mak))
+				)
+
+				$(LI
+					Now compile druntime and Phobos with the same command, but in these paths instead:
+					$(UL
+						$(LI $(VAR path)/dlang/druntime)
+						$(LI $(VAR path)/dlang/phobos)
+					)
 				)
 			)
 		)
