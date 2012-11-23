@@ -253,9 +253,8 @@ DFLAGS=-I%@P%/../../phobos -I%@P%/../../druntime/import -L-L%@P%/../../phobos/ge
 		$(SECTION3 $(ANCHOR detailed_instructions_hello_world), Test the Compiler - Hello World,
 			$(OL
 				$(LI Navigate to $(VAR path)/dlang/dmd/src)
-				$(LI Create a new file, main.d, with the following content:)
-
-				$(D_CODE
+				$(LI Create a new file, main.d, with the following content:
+---
 module main;
 
 import std.stdio;
@@ -264,7 +263,8 @@ void main ()
 {
     writeln("Hello World");
 }
-				)				
+---
+				)
 			)
 		)
 	)
