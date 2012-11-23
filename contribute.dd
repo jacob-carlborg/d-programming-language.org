@@ -228,5 +228,26 @@ $(D_S Contribute,
 				)
 			)
 		)
+
+		$(SECTION3 $(ANCHOR detailed_instructions_config, Configure the Compiler),
+			$(OL
+				$(LI Navigate to $(VAR path)/dlang/dmd/src)
+				$(LI
+					Create a new file with the following content:
+
+					$(SECTION4 Posix - dmd.conf,
+						$(D_CODE
+[Environment]
+
+DFLAGS=-I%@P%/../../phobos -I%@P%/../../druntime/import -L-L%@P%/../../phobos/generated/$(VAR platform)/release/$(VAR 32|64)
+						)
+					)
+
+					$(SECTION4 Windows - dmd.ini,
+						
+					)
+				)
+			)
+		)
 	)
 )
