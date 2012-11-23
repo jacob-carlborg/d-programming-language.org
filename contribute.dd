@@ -265,6 +265,22 @@ void main ()
 }
 ---
 				)
+
+				$(LI
+					Compile the file using this command:
+
+					$(D_CODE
+$ ./dmd main.d
+					)
+				)
+
+				$(LI
+					Run the newly built application:
+
+					$(D_CODE
+$ ./main
+					)
+				)
 			)
 		)
 	)
