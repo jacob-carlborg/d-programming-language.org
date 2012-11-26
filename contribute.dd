@@ -199,13 +199,13 @@ $(D_S Contribute,
 
 				$(LI 
 					In $(VAR path)/dlang clone your own fork of DMD by running:
-					$(D_CODE $ git clone https://github.com/$(VAR github_account_name)/dmd)
+					$(D_CODE $ git clone git@github.com:$(VAR github_account_name)/dmd.git)
 				)
 	
 				$(LI
 					Now clone the Phobos and druntime repositories as well:
-					$(D_CODE $ git clone https://github.com/$(VAR github_account_name)/phobos)
-					$(D_CODE $ git clone https://github.com/$(VAR github_account_name)/druntime)
+					$(D_CODE $ git clone git@github.com:$(VAR github_account_name)/phobos.git)
+					$(D_CODE $ git clone git@github.com:$(VAR github_account_name)/druntime.git)
 				)
 			)
 		)
@@ -250,7 +250,7 @@ DFLAGS=-I%@P%/../../phobos -I%@P%/../../druntime/import -L-L%@P%/../../phobos/ge
 			)
 		)
 
-		$(SECTION3 $(ANCHOR detailed_instructions_hello_world), Test the Compiler - Hello World,
+		$(SECTION3 $(ANCHOR detailed_instructions_hello_world, Test the Compiler - Hello World),
 			$(OL
 				$(LI Navigate to $(VAR path)/dlang/dmd/src)
 				$(LI Create a new file, main.d, with the following content:
