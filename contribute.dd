@@ -285,5 +285,53 @@ $ ./main
 				$(LI It should print "Hello World")
 			)
 		)
+
+		$(SECTION3 $(ANCHOR detailed_instructions_testing, Run the Tests),
+			$(P
+				Before making any changes it's a good idea to run the tests to make
+				sure you're not breaking anything. In a perfect world every test would
+				always pass, but it happens from time to time that some test(s) will fail.
+				Therefore it's a good idea to know if your changes caused the test(s) to
+				fail or not.
+			)
+
+			$(P
+				Depending on what project you want to make changes to you should try to
+				always test the project you change and any project that it depends on.
+				That means, for example, that both druntime and Phobos depend on
+				changes made to DMD. But DMD will have no dependencies made on Phobos.
+				druntime and DMD is a special case since they both are tightly integrated
+				and depend on each other.
+			)
+
+			$(OL
+				$(LI Navigate to repository you want to make changes to)
+				$(LI 
+					Run the tests by running:
+					$(SECTION4 DMD,
+						In the path $(VAR path)/dlang/dmd/test
+						$(D_CODE make)
+					)
+
+					$(SECTION4 druntime and Phobos,
+						$(D_CODE make -f $(VAR platform).mak unittest)
+					)
+				)
+			)
+		)
+
+		$(SECTION3 $(ANCHOR detailed_instructions_changes, Make the Changes),
+			$(OL
+				$(LI Navigate to repository you want to make changes to)
+
+				$(LI
+					Create and checkout a new git branch by running:
+					$(D_CODE $ git checkout -b $(VAR branch_name))
+				)
+
+				$(LI Make your changes)
+				$(LI Commit the changes)
+			)
+		)
 	)
 )
