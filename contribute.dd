@@ -3,43 +3,15 @@ Ddoc
 $(D_S Contribute,
 	$(SECTION3 Quick links,
 		$(UL
-			$(LI Compile the compiler, runtime and standard library)
+			$(LI $(LINK2 detailed_instructions_compile, Compile the compiler, runtime and standard library))
 		)
 	)
 
 	$(P
 		This page contains instructions for contributing to the D programming language,
-		including all tools shipped with the reference implementation.
-	)
-
-	$(P
-		Regardless of what you want to contribute to you need to install the
-		reference compiler, runtime and standard library.
-	)
-
-	$(SECTION3 Conventions,
-	  In this page the following conventions are used:
-	  $(UL
-	    $(LI 
-	      "Posix" is considered to be FreeBSD, Linux, Mac OS X and basically any
-	      operating system other than Windows
-	    )
-
-      $(LI
-        $(I $(VAR var)) is used to indicate a piece of text shat should be replaced. Do not use it
-        as it literarily stands
-      )
-
-      $(LI
-        A dollar sign, $, indicates that a command should be run in a terminal. The dollar
-        sign is itself not part of the command and should not be typed
-      )
-
-			$(LI
-				All local paths are written for Posix. To make the paths work on Windows
-				you generally just need to replace all slashes (/) with a backslash (\)
-			)
-	  )
+		including all tools shipped with the reference implementation. Regardless of
+		what you want to contribute to you need to install the reference compiler,
+		runtime and standard library.
 	)
 
 	$(P
@@ -80,6 +52,31 @@ $(D_S Contribute,
 		)
 	)
 
+	$(SECTION3 Conventions,
+	  In this page the following conventions are used:
+	  $(UL
+	    $(LI 
+	      "Posix" is considered to be FreeBSD, Linux, Mac OS X and basically any
+	      operating system other than Windows
+	    )
+
+      $(LI
+        $(I $(VAR var)) is used to indicate a piece of text shat should be replaced. Do not use it
+        as it literarily stands
+      )
+
+      $(LI
+        A dollar sign, $, indicates that a command should be run in a terminal. The dollar
+        sign is itself not part of the command and should not be typed
+      )
+
+			$(LI
+				All local paths are written for Posix. To make the paths work on Windows
+				you generally just need to replace all slashes (/) with a backslash (\)
+			)
+	  )
+	)
+
 	$(SECTION2 Overview,
 		$(OL
 			$(LI Install the $(LINK2 #prerequisites, prerequisites))
@@ -95,7 +92,7 @@ $(D_S Contribute,
 			$(LI Rebase the latest changes from the master branch)
 			$(LI Push the newly created branch to your fork at github)
 			$(LI Create a pull request on the newly pushed branch from your fork at github)
-			$(LI Wait for the changes you get merged upstream)
+			$(LI Wait for the changes to get merged upstream)
 		)
 	)
 
@@ -375,17 +372,23 @@ $ ./main
 				tested before they are merged by an continues integration server.
 				The whole test suite will be run regardless on which project the changes
 				were made. There's also a server running the tests for commits made
-				directly to the projects. If you see that your pull request broke some
-				test(s), make sure you fix the pull request as soon as possible.
-				All tests need to pass before a pull request can be merge.
+				directly to the projects.
+			)
 
-				$(SECTION4 Auto Tester - Pull Requests,
-					$(LINK2 http://d.puremagic.com/test-results/pulls.ghtml, http://d.puremagic.com/test-results/pulls.ghtml)
-				)
+			$(P
+				If you see that your pull request broke some test(s), make sure you fix
+				the pull request as soon as possible. All tests need to pass before a
+				pull request can be merge. You may also receive comments on your pull
+				request made by the reviewers. You will receive a email notification as
+				soon as someone comments your pull request.
+			)
 
-				$(SECTION4 Auto Tester,
-					$(LINK2 http://d.puremagic.com/test-results/, http://d.puremagic.com/test-results/)
-				)
+			$(SECTION4 Auto Tester - Pull Requests,
+				$(LINK2 http://d.puremagic.com/test-results/pulls.ghtml, http://d.puremagic.com/test-results/pulls.ghtml)
+			)
+
+			$(SECTION4 Auto Tester,
+				$(LINK2 http://d.puremagic.com/test-results/, http://d.puremagic.com/test-results/)
 			)
 		)
 	)
