@@ -267,8 +267,16 @@ DFLAGS=-I%@P%/../../phobos -I%@P%/../../druntime/import -L-L%@P%/../../phobos/ge
 						)
 					)
 
-					$(SECTION4 Windows - dmd.ini,
-						
+					$(SECTION4 Windows - sc.ini,
+						$(D_CODE
+[Version]
+version=7.51 Build 020
+
+[Environment]
+LIB="%@P%\..\..\phobos\generated\win32\release";$(VAR path)\dm\lib
+DFLAGS="-I%@P%\..\..\phobos" "-I%@P%\..\..\druntime\import"
+LINKCMD=%@P%\link.exe
+						)
 					)
 				)
 			)
