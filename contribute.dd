@@ -368,5 +368,25 @@ $ ./main
 				$(LI Click "Send pull request" to make the pull request)
 			)
 		)
+
+		$(SECTION3 $(ANCHOR detailed_instructions_monitoring, Monitoring the Pull Request),
+			$(P
+				All pull request sent to DMD, druntime or Phobos will automatically be
+				tested before they are merged by an continues integration server.
+				The whole test suite will be run regardless on which project the changes
+				were made. There's also a server running the tests for commits made
+				directly to the projects. If you see that your pull request broke some
+				test(s), make sure you fix the pull request as soon as possible.
+				All tests need to pass before a pull request can be merge.
+
+				$(SECTION4 Auto Tester - Pull Requests,
+					$(LINK2 http://d.puremagic.com/test-results/pulls.ghtml, http://d.puremagic.com/test-results/pulls.ghtml)
+				)
+
+				$(SECTION4 Auto Tester,
+					$(LINK2 http://d.puremagic.com/test-results/, http://d.puremagic.com/test-results/)
+				)
+			)
+		)
 	)
 )
