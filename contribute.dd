@@ -3,7 +3,12 @@ Ddoc
 $(D_S Contribute,
 	$(SECTION3 Quick links,
 		$(UL
-			$(LI $(LINK2 detailed_instructions_compile, Compile the compiler, runtime and standard library))
+			$(LI $(LINK2 #detailed_instructions_clone_repositories, Getting the Source Code))
+			$(LI $(LINK2 #detailed_instructions_compile, Compile the compiler, runtime and standard library))
+			$(LI $(LINK2 #detailed_instructions_config, Configure the Compiler))
+			$(LI $(LINK2 #detailed_instructions_hello_world, Test the Compiler - Hello World))
+			$(LI $(LINK2 #detailed_instructions_testing, Run the Tests))
+			$(LI $(LINK2 #detailed_instructions_monitoring, Monitoring the Pull Request))
 		)
 	)
 
