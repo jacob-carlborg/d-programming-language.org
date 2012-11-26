@@ -4,7 +4,7 @@ $(D_S Contribute,
 	$(SECTION3 Quick links,
 		$(UL
 			$(LI $(LINK2 #detailed_instructions_clone_repositories, Getting the Source Code))
-			$(LI $(LINK2 #detailed_instructions_compile, Compile the compiler, runtime and standard library))
+			$(LI $(LINK2 #detailed_instructions_compile_dvm, Compile the compiler, runtime and standard library))
 			$(LI $(LINK2 #detailed_instructions_config, Configure the Compiler))
 			$(LI $(LINK2 #detailed_instructions_hello_world, Test the Compiler - Hello World))
 			$(LI $(LINK2 #detailed_instructions_testing, Run the Tests))
@@ -212,7 +212,29 @@ $(D_S Contribute,
 			)
 		)
 
-		$(SECTION3 $(ANCHOR detailed_instructions_compile, Compile the Projects),
+		$(SECTION3 $(ANCHOR detailed_instructions_compile_dvm, Compile the Projects with DVM),
+			$(P
+				You can either compile the projects automatically using
+				$(LINK2 https://github.com/jacob-carlborg/dvm, DVM) or manually using
+				the $(LINK2 #detailed_instructions_compile_manually, instructions below).
+			)
+
+			$(OL
+				$(LI
+					Install DVM by following the instructions at the
+					$(LINK2 https://github.com/jacob-carlborg/dvm, DVM page)
+				)
+
+				$(LI
+					Navigate to $(VAR path)/dlang and run:
+					$(D_CODE $ dvm compile .)
+				)
+
+				$(LI Skip to $(LINK2 #detailed_instructions_testing, Run the Tests))
+			)
+		)
+
+		$(SECTION3 $(ANCHOR detailed_instructions_compile_manually, Compile the Projects Manually),
 			$(OL
 				$(LI Navigate to $(VAR path)/dlang/dmd/src)
 
