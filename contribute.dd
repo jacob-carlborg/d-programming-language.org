@@ -281,6 +281,8 @@ $ ./dmd main.d
 $ ./main
 					)
 				)
+
+				$(LI It should print "Hello World")
 			)
 		)
 	)
