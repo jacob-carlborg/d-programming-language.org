@@ -322,7 +322,7 @@ $ ./main
 
 		$(SECTION3 $(ANCHOR detailed_instructions_changes, Make the Changes),
 			$(OL
-				$(LI Navigate to repository you want to make changes to)
+				$(LI Navigate to project you want to make changes to)
 
 				$(LI
 					Create and checkout a new git branch by running:
@@ -330,7 +330,42 @@ $ ./main
 				)
 
 				$(LI Make your changes)
-				$(LI Commit the changes)
+
+				$(LI
+					Commit the changes:
+					$(D_CODE $ git commit -a -m "commit message")
+				)
+
+				$(LI
+					Rerun the tests (see $(LINK2 #detailed_instructions_testing, Run the Tests))
+					and make sure all tests that passed before still pass.
+				)
+
+				$(LI
+					Push the changes to your fork at github:
+					$(D_CODE $ git push origin $(VAR branch_name))
+				)
+			)
+		)
+
+		$(SECTION3 $(ANCHOR detailed_instructions_pull_request, Create a Pull Request),
+			$(OL
+				$(LI
+					Navigate to your fork at github for the repository you just made the
+					changes to
+				)
+
+				$(LI
+					Switch to the branch you made the changes to by clicking the
+					"branch" button to the left and select $(VAR branch_name)
+				)
+
+				$(LI
+					Click the "Pull Request" button the the top
+				)
+
+				$(LI Enter the title of the pull request and a comment)
+				$(LI Click "Send pull request" to make the pull request)
 			)
 		)
 	)
